@@ -1,0 +1,10 @@
+extends layout/layout.pug
+block content
+  h1 Q4
+    p enter a question:
+    form(action='/upload' method= 'post')
+      label(for='question') Question:
+      input#question(type='text' name='question' placeholder='question')
+      br
+      button(type='submit' value='post') Submit
+    p Answer: #{answers}
